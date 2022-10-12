@@ -11,10 +11,11 @@
 		281845FA28F5E75B002FB435 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281845F928F5E75B002FB435 /* ContentView.swift */; };
 		281845FC28F5E75C002FB435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FB28F5E75C002FB435 /* Assets.xcassets */; };
 		281845FF28F5E75C002FB435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FE28F5E75C002FB435 /* Preview Assets.xcassets */; };
+		2818460728F5E7A3002FB435 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2818460628F5E7A3002FB435 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		281845F428F5E75B002FB435 /* ScanHalloween.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanHalloween.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		281845F428F5E75B002FB435 /*  Hallowedemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = " Hallowedemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHalloweenApp.swift; sourceTree = "<group>"; };
 		281845F928F5E75B002FB435 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		281845FB28F5E75C002FB435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2818460728F5E7A3002FB435 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +45,7 @@
 		281845F528F5E75B002FB435 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				281845F428F5E75B002FB435 /* ScanHalloween.app */,
+				281845F428F5E75B002FB435 /*  Hallowedemy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		281845F328F5E75B002FB435 /* ScanHalloween */ = {
+		281845F328F5E75B002FB435 /*  Hallowedemy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2818460228F5E75C002FB435 /* Build configuration list for PBXNativeTarget "ScanHalloween" */;
+			buildConfigurationList = 2818460228F5E75C002FB435 /* Build configuration list for PBXNativeTarget " Hallowedemy" */;
 			buildPhases = (
 				281845F028F5E75B002FB435 /* Sources */,
 				281845F128F5E75B002FB435 /* Frameworks */,
@@ -82,9 +84,12 @@
 			);
 			dependencies = (
 			);
-			name = ScanHalloween;
+			name = " Hallowedemy";
+			packageProductDependencies = (
+				2818460628F5E7A3002FB435 /* CodeScanner */,
+			);
 			productName = ScanHalloween;
-			productReference = 281845F428F5E75B002FB435 /* ScanHalloween.app */;
+			productReference = 281845F428F5E75B002FB435 /*  Hallowedemy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 281845EF28F5E75B002FB435 /* Build configuration list for PBXProject "ScanHalloween" */;
+			buildConfigurationList = 281845EF28F5E75B002FB435 /* Build configuration list for PBXProject " HallowApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +116,14 @@
 				Base,
 			);
 			mainGroup = 281845EB28F5E75B002FB435;
+			packageReferences = (
+				2818460528F5E7A3002FB435 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 281845F528F5E75B002FB435 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				281845F328F5E75B002FB435 /* ScanHalloween */,
+				281845F328F5E75B002FB435 /*  Hallowedemy */,
 			);
 		};
 /* End PBXProject section */
@@ -270,18 +278,20 @@
 				DEVELOPMENT_TEAM = XJ57BXJG95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso usar tua camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = teste.ScanHalloween;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = " Hallowedemy";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,18 +309,20 @@
 				DEVELOPMENT_TEAM = XJ57BXJG95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso usar tua camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Ligth;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = teste.ScanHalloween;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = " Hallowedemy";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +332,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		281845EF28F5E75B002FB435 /* Build configuration list for PBXProject "ScanHalloween" */ = {
+		281845EF28F5E75B002FB435 /* Build configuration list for PBXProject " HallowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2818460028F5E75C002FB435 /* Debug */,
@@ -329,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2818460228F5E75C002FB435 /* Build configuration list for PBXNativeTarget "ScanHalloween" */ = {
+		2818460228F5E75C002FB435 /* Build configuration list for PBXNativeTarget " Hallowedemy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2818460328F5E75C002FB435 /* Debug */,
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2818460528F5E7A3002FB435 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2818460628F5E7A3002FB435 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2818460528F5E7A3002FB435 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 281845EC28F5E75B002FB435 /* Project object */;
 }
