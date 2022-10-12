@@ -67,12 +67,11 @@ struct ARViewContainer: UIViewRepresentable {
             let anchor = AnchorEntity()
             view.scene.anchors.append(anchor)
 
-            let box = MeshResource.generateBox(size: 0.5, cornerRadius: 0.05)
-            let material = SimpleMaterial(color: .blue, isMetallic: true)
-            let diceEntity = ModelEntity(mesh: box, materials: [material])
-            diceEntity.position = focusEntity.position
+            let ghostEntity = try! ModelEntity.loadModel(named: "Ghost")
+            ghostEntity.scale = [0.025, 0.025, 0.025]
+            ghostEntity.position = focusEntity.position
 
-            anchor.addChild(diceEntity)
+            anchor.addChild(ghostEntity)
         }
     }
 }
