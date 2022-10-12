@@ -27,7 +27,7 @@ struct ScanHalloween: View {
                     if case let .success(code) = result{
                         self.scannedCode = code.string
                         self.isPresentingScanner = false
-                        self.isPresentingModal = true
+                       // self.isPresentingModal = true
                     }
                 }
             )
@@ -45,8 +45,8 @@ struct ScanHalloween: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
             
             Spacer()
-        }.sheet(isPresented: $isPresentingModal){
-            self.modal
+        }.onDisappear(){
+            self.isPresentingModal = true
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
@@ -103,9 +103,9 @@ struct ScanHalloween: View {
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
             }
-//            .sheet(isPresented: $isPresentingModal){
-//                self.modal
-//            }
+            .sheet(isPresented: $isPresentingModal){
+                self.modal
+            }
         }
     }
     
