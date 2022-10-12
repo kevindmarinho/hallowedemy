@@ -12,6 +12,7 @@ struct ScanHalloween: View {
     @State var isPresentingScanner = false
     @State var isPresentingModal = false
     @State var scannedCode: String = "Fantasma off, tente scanear de novo"
+    @State var codeWasScanned = false
     
     var scannerSheet : some View {
         VStack{
@@ -27,9 +28,11 @@ struct ScanHalloween: View {
                     if case let .success(code) = result{
                         self.scannedCode = code.string
                         self.isPresentingScanner = false
+                        self.codeWasScanned = true
                        // self.isPresentingModal = true
                     }
                 }
+                
             )
             .cornerRadius(15)
             .overlay(
@@ -45,8 +48,12 @@ struct ScanHalloween: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
             
             Spacer()
-        }.onDisappear(){
-            self.isPresentingModal = true
+        }
+        .onDisappear(){
+            if codeWasScanned{
+                self.isPresentingModal = true
+            }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
