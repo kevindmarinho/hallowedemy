@@ -80,7 +80,7 @@ struct HomeHalloweenView: View {
                 .padding(.bottom, 36.48)
                
                 Text("Escaneie os QR codes espalhados pelo lab e desvende os enigmas propostos. Lembre-se de explorar todo o ambiente e tenha uma experiência horripilante.")
-                    .font(.system(size: 18))
+                    .font(.system(size: 16))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .padding(.horizontal, 26)
@@ -89,7 +89,7 @@ struct HomeHalloweenView: View {
                 Image("ghost")
                     .resizable()
                     .frame(width: 220.5, height: 252)
-                    .padding(.bottom, 62)
+                    .padding(.bottom, 35)
                 
                 Button{
                     self.isPresentingScanner = true
@@ -105,6 +105,7 @@ struct HomeHalloweenView: View {
                 }
                 
                 NavigationLink(destination: ARDisplayView()) {
+                    HStack{
                         Text("Ele está aqui")
                             .bold()
                             .padding(.vertical, 25)
@@ -113,9 +114,10 @@ struct HomeHalloweenView: View {
                             .foregroundColor(.white)
                             .cornerRadius(40)
                             .padding(.horizontal, 25)
-                }
+
+                    }
+                }.padding(.bottom, 30)
                 
-                Spacer()
             }
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
@@ -124,6 +126,8 @@ struct HomeHalloweenView: View {
                 self.modal
             }
         }
+        .navigationBarHidden(true)
+        .ignoresSafeArea()
     }
     
     var modal: some View{
