@@ -45,6 +45,8 @@ struct ScanHalloween: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
             
             Spacer()
+        }.sheet(isPresented: $isPresentingModal){
+            self.modal
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
@@ -101,9 +103,9 @@ struct ScanHalloween: View {
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
             }
-            .sheet(isPresented: $isPresentingModal){
-                self.modal
-            }
+//            .sheet(isPresented: $isPresentingModal){
+//                self.modal
+//            }
         }
     }
     
