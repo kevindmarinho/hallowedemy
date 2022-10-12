@@ -18,9 +18,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] Exibir Modelo 3D em realidade Aumentada
 - [ ] Gerar app no Test Flight
 
-## 🚀 Instalando <Hallowedemy>
+## 🚀 Instalando Hallowedemy
 
-Para instalar o <Hallowedemy>, siga estas etapas:
+Para instalar o Hallowedemy, siga estas etapas:
 
 MacOS:
 ```
