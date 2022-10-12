@@ -14,16 +14,30 @@ struct ScanHalloween: View {
     @State var scannedCode: String = "Fantasma off, tente scanear de novo"
     
     var scannerSheet : some View {
-        CodeScannerView(
-            codeTypes: [.qr],
-            completion: { result in
-                if case let .success(code) = result{
-                    self.scannedCode = code.string
-                    self.isPresentingScanner = false
-                    self.isPresentingModal = true
+        ZStack{
+            CodeScannerView(
+                codeTypes: [.qr],
+                completion: { result in
+                    if case let .success(code) = result{
+                        self.scannedCode = code.string
+                        self.isPresentingScanner = false
+                        self.isPresentingModal = true
+                    }
                 }
-            }
-        )
+            )
+            .cornerRadius(15)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.backgroundYellow, lineWidth: 5)
+            )
+            .frame(width: 300, height: 300, alignment: .center)
+            
+            
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.background)
+        
     }
     var body: some View {
         
@@ -65,7 +79,7 @@ struct ScanHalloween: View {
                         .bold()
                         .padding(.vertical, 25)
                         .frame(maxWidth: .infinity)
-                        .background(Color.orange)
+                        .background(Color.backgroundYellow)
                         .foregroundColor(.white)
                         .cornerRadius(40)
                         .padding(.horizontal, 25)
@@ -93,6 +107,7 @@ struct ScanHalloween: View {
 extension Color{
     
     static let background = Color("ColorBackground")
+    static let backgroundYellow = Color("ColorYellow")
 }
 
 
