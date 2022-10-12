@@ -11,7 +11,7 @@ import CodeScanner
 struct ScanHalloween: View {
     @State var isPresentingScanner = false
     @State var isPresentingModal = false
-    @State var scannedCode: String = "Escaneie os QR codes espalhados pelo lab e desvende os enigmas propostos. Lembre-se de explorar todo o ambiente e tenha uma experiência horripilante."
+    @State var scannedCode: String = "Fantasma off, tente scanear de novo"
     
     var scannerSheet : some View {
         CodeScannerView(
