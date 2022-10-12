@@ -60,7 +60,6 @@ struct HomeHalloweenView: View {
     }
     
     var body: some View {
-        
         ZStack{
             
             Image("backgroundInicio")
@@ -103,6 +102,17 @@ struct HomeHalloweenView: View {
                         .foregroundColor(.white)
                         .cornerRadius(40)
                         .padding(.horizontal, 25)
+                }
+                
+                NavigationLink(destination: ARDisplayView()) {
+                        Text("Ele está aqui")
+                            .bold()
+                            .padding(.vertical, 25)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.backgroundYellow)
+                            .foregroundColor(.white)
+                            .cornerRadius(40)
+                            .padding(.horizontal, 25)
                 }
                 
                 Spacer()
