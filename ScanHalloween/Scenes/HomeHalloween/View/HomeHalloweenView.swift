@@ -8,13 +8,13 @@
 import SwiftUI
 import CodeScanner
 
-struct ScanHalloween: View {
+struct HomeHalloweenView: View {
     @State var isPresentingScanner = false
     @State var isPresentingModal = false
     @State var scannedCode: String = "Fantasma off, tente scanear de novo"
     @State var codeWasScanned = false
     
-    var scannerSheet : some View {
+    var scannerSheet: some View {
         VStack{
             
             Image("teia")
@@ -29,7 +29,6 @@ struct ScanHalloween: View {
                         self.scannedCode = code.string
                         self.isPresentingScanner = false
                         self.codeWasScanned = true
-                       // self.isPresentingModal = true
                     }
                 }
                 
@@ -59,6 +58,7 @@ struct ScanHalloween: View {
         .background(Color.background)
         
     }
+    
     var body: some View {
         
         ZStack{
@@ -129,15 +129,8 @@ struct ScanHalloween: View {
     }
 }
 
-extension Color{
-    
-    static let background = Color("ColorBackground")
-    static let backgroundYellow = Color("ColorYellow")
-}
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ScanHalloween()
+        HomeHalloweenView()
     }
 }

@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		281845F828F5E75B002FB435 /* ScanHalloweenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */; };
-		281845FA28F5E75B002FB435 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281845F928F5E75B002FB435 /* ContentView.swift */; };
+		281845FA28F5E75B002FB435 /* HomeHalloweenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281845F928F5E75B002FB435 /* HomeHalloweenView.swift */; };
 		281845FC28F5E75C002FB435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FB28F5E75C002FB435 /* Assets.xcassets */; };
 		281845FF28F5E75C002FB435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FE28F5E75C002FB435 /* Preview Assets.xcassets */; };
 		2818460728F5E7A3002FB435 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2818460628F5E7A3002FB435 /* CodeScanner */; };
-		2818460928F60222002FB435 /* ghostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818460828F60222002FB435 /* ghostView.swift */; };
-		2818461E28F67A88002FB435 /* EnigmaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818461D28F67A88002FB435 /* EnigmaView.swift */; };
+		724870AC28F739D5001B3148 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870AB28F739D5001B3148 /* Color+Extensions.swift */; };
+		724870B328F73DB5001B3148 /* GhostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870B228F73DB5001B3148 /* GhostView.swift */; };
+		724870B528F73DD7001B3148 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870B428F73DD7001B3148 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		281845F428F5E75B002FB435 /*  Hallowedemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = " Hallowedemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHalloweenApp.swift; sourceTree = "<group>"; };
-		281845F928F5E75B002FB435 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		281845F928F5E75B002FB435 /* HomeHalloweenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHalloweenView.swift; sourceTree = "<group>"; };
 		281845FB28F5E75C002FB435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		281845FE28F5E75C002FB435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2818460828F60222002FB435 /* ghostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ghostView.swift; sourceTree = "<group>"; };
 		2818460A28F60439002FB435 /* -Hallowedemy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-Hallowedemy-Info.plist"; sourceTree = "<group>"; };
-		2818461D28F67A88002FB435 /* EnigmaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnigmaView.swift; sourceTree = "<group>"; };
+		724870AB28F739D5001B3148 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		724870B228F73DB5001B3148 /* GhostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostView.swift; sourceTree = "<group>"; };
+		724870B428F73DD7001B3148 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +61,9 @@
 		281845F628F5E75B002FB435 /* ScanHalloween */ = {
 			isa = PBXGroup;
 			children = (
-				281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */,
-				2818460828F60222002FB435 /* ghostView.swift */,
-				281845F928F5E75B002FB435 /* ContentView.swift */,
-				2818461D28F67A88002FB435 /* EnigmaView.swift */,
+				724870AA28F739BA001B3148 /* Shared */,
+				724870A728F738FE001B3148 /* App */,
+				724870A828F7391E001B3148 /* Scenes */,
 				281845FB28F5E75C002FB435 /* Assets.xcassets */,
 				281845FD28F5E75C002FB435 /* Preview Content */,
 			);
@@ -75,6 +76,72 @@
 				281845FE28F5E75C002FB435 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		724870A728F738FE001B3148 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		724870A828F7391E001B3148 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				724870AF28F73D87001B3148 /* GhostView */,
+				724870A928F7399A001B3148 /* HomeHalloween */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		724870A928F7399A001B3148 /* HomeHalloween */ = {
+			isa = PBXGroup;
+			children = (
+				724870AD28F73A19001B3148 /* View */,
+			);
+			path = HomeHalloween;
+			sourceTree = "<group>";
+		};
+		724870AA28F739BA001B3148 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				724870AB28F739D5001B3148 /* Color+Extensions.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		724870AD28F73A19001B3148 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				281845F928F5E75B002FB435 /* HomeHalloweenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		724870AF28F73D87001B3148 /* GhostView */ = {
+			isa = PBXGroup;
+			children = (
+				724870B128F73D98001B3148 /* ViewModel */,
+				724870B028F73D92001B3148 /* View */,
+			);
+			path = GhostView;
+			sourceTree = "<group>";
+		};
+		724870B028F73D92001B3148 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				724870B228F73DB5001B3148 /* GhostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		724870B128F73D98001B3148 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				724870B428F73DD7001B3148 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				281845FA28F5E75B002FB435 /* ContentView.swift in Sources */,
-				2818460928F60222002FB435 /* ghostView.swift in Sources */,
+				724870B528F73DD7001B3148 /* ViewModel.swift in Sources */,
+				281845FA28F5E75B002FB435 /* HomeHalloweenView.swift in Sources */,
 				281845F828F5E75B002FB435 /* ScanHalloweenApp.swift in Sources */,
-				2818461E28F67A88002FB435 /* EnigmaView.swift in Sources */,
+				724870B328F73DB5001B3148 /* GhostView.swift in Sources */,
+				724870AC28F739D5001B3148 /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -267,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -285,7 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanHalloween/Preview Content\"";
-				DEVELOPMENT_TEAM = XJ57BXJG95;
+				DEVELOPMENT_TEAM = TSL9RRYSR6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-Hallowedemy-Info.plist";
@@ -317,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanHalloween/Preview Content\"";
-				DEVELOPMENT_TEAM = XJ57BXJG95;
+				DEVELOPMENT_TEAM = TSL9RRYSR6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-Hallowedemy-Info.plist";
