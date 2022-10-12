@@ -14,7 +14,13 @@ struct ScanHalloween: View {
     @State var scannedCode: String = "Fantasma off, tente scanear de novo"
     
     var scannerSheet : some View {
-        ZStack{
+        VStack{
+            
+            Image("teia")
+                .resizable()
+                .frame(width: 133, height: 200)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Spacer()
             CodeScannerView(
                 codeTypes: [.qr],
                 completion: { result in
@@ -32,8 +38,13 @@ struct ScanHalloween: View {
             )
             .frame(width: 300, height: 300, alignment: .center)
             
+            Image("ghost-lado")
+                .resizable()
+                .frame(width: 150, height: 200)
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity, alignment: .trailing)
             
-            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
@@ -98,8 +109,13 @@ struct ScanHalloween: View {
     
     var modal: some View{
         ZStack{
-            Color.cyan
+            Color.background.ignoresSafeArea()
             Text(scannedCode)
+                .font(.system(size: 18))
+                .multilineTextAlignment(.center)
+                .foregroundColor(.white)
+                .padding(.horizontal, 26)
+                .padding(.bottom, 23)
         }
     }
 }
