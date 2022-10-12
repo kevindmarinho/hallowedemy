@@ -12,6 +12,8 @@
 		281845FC28F5E75C002FB435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FB28F5E75C002FB435 /* Assets.xcassets */; };
 		281845FF28F5E75C002FB435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FE28F5E75C002FB435 /* Preview Assets.xcassets */; };
 		2818460728F5E7A3002FB435 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2818460628F5E7A3002FB435 /* CodeScanner */; };
+		2818460928F60222002FB435 /* ghostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818460828F60222002FB435 /* ghostView.swift */; };
+		2818461E28F67A88002FB435 /* EnigmaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2818461D28F67A88002FB435 /* EnigmaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		281845F928F5E75B002FB435 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		281845FB28F5E75C002FB435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		281845FE28F5E75C002FB435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2818460828F60222002FB435 /* ghostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ghostView.swift; sourceTree = "<group>"; };
+		2818460A28F60439002FB435 /* -Hallowedemy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-Hallowedemy-Info.plist"; sourceTree = "<group>"; };
+		2818461D28F67A88002FB435 /* EnigmaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnigmaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 		281845EB28F5E75B002FB435 = {
 			isa = PBXGroup;
 			children = (
+				2818460A28F60439002FB435 /* -Hallowedemy-Info.plist */,
 				281845F628F5E75B002FB435 /* ScanHalloween */,
 				281845F528F5E75B002FB435 /* Products */,
 			);
@@ -54,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */,
+				2818460828F60222002FB435 /* ghostView.swift */,
 				281845F928F5E75B002FB435 /* ContentView.swift */,
+				2818461D28F67A88002FB435 /* EnigmaView.swift */,
 				281845FB28F5E75C002FB435 /* Assets.xcassets */,
 				281845FD28F5E75C002FB435 /* Preview Content */,
 			);
@@ -107,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 281845EF28F5E75B002FB435 /* Build configuration list for PBXProject " HallowApp" */;
+			buildConfigurationList = 281845EF28F5E75B002FB435 /* Build configuration list for PBXProject "Hallowedemy" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				281845FA28F5E75B002FB435 /* ContentView.swift in Sources */,
+				2818460928F60222002FB435 /* ghostView.swift in Sources */,
 				281845F828F5E75B002FB435 /* ScanHalloweenApp.swift in Sources */,
+				2818461E28F67A88002FB435 /* EnigmaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +288,7 @@
 				DEVELOPMENT_TEAM = XJ57BXJG95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-Hallowedemy-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso usar tua camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -309,6 +320,7 @@
 				DEVELOPMENT_TEAM = XJ57BXJG95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-Hallowedemy-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso usar tua camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		281845EF28F5E75B002FB435 /* Build configuration list for PBXProject " HallowApp" */ = {
+		281845EF28F5E75B002FB435 /* Build configuration list for PBXProject "Hallowedemy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2818460028F5E75C002FB435 /* Debug */,
