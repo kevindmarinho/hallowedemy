@@ -18,7 +18,7 @@ struct ScanHalloween: View {
             
             Image("teia")
                 .resizable()
-                .frame(width: 133, height: 200)
+                .frame(width: 100, height: 150)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
             CodeScannerView(
@@ -36,11 +36,11 @@ struct ScanHalloween: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.backgroundYellow, lineWidth: 5)
             )
-            .frame(width: 300, height: 300, alignment: .center)
+            .frame(width: 300, height: 400, alignment: .center)
             
             Image("ghost-lado")
                 .resizable()
-                .frame(width: 150, height: 200)
+                .frame(width: 100, height: 150)
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, alignment: .trailing)
             
