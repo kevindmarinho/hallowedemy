@@ -40,7 +40,7 @@ struct ScanHalloween: View {
             
             Image("ghost-lado")
                 .resizable()
-                .frame(width: 100, height: 150)
+                .frame(width: 125, height: 175)
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, alignment: .trailing)
             
