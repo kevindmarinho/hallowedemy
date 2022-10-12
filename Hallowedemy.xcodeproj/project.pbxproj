@@ -13,8 +13,9 @@
 		281845FF28F5E75C002FB435 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281845FE28F5E75C002FB435 /* Preview Assets.xcassets */; };
 		2818460728F5E7A3002FB435 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2818460628F5E7A3002FB435 /* CodeScanner */; };
 		724870AC28F739D5001B3148 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870AB28F739D5001B3148 /* Color+Extensions.swift */; };
-		724870B328F73DB5001B3148 /* GhostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870B228F73DB5001B3148 /* GhostView.swift */; };
-		724870B528F73DD7001B3148 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870B428F73DD7001B3148 /* ViewModel.swift */; };
+		724870B328F73DB5001B3148 /* ARDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724870B228F73DB5001B3148 /* ARDisplayView.swift */; };
+		724870B928F74362001B3148 /* Ghost.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 724870B828F74362001B3148 /* Ghost.usdz */; };
+		724870FD28F75410001B3148 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 724870FC28F75410001B3148 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +26,8 @@
 		281845FE28F5E75C002FB435 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2818460A28F60439002FB435 /* -Hallowedemy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-Hallowedemy-Info.plist"; sourceTree = "<group>"; };
 		724870AB28F739D5001B3148 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		724870B228F73DB5001B3148 /* GhostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostView.swift; sourceTree = "<group>"; };
-		724870B428F73DD7001B3148 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		724870B228F73DB5001B3148 /* ARDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDisplayView.swift; sourceTree = "<group>"; };
+		724870B828F74362001B3148 /* Ghost.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Ghost.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724870FD28F75410001B3148 /* FocusEntity in Frameworks */,
 				2818460728F5E7A3002FB435 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +65,7 @@
 			children = (
 				724870AA28F739BA001B3148 /* Shared */,
 				724870A728F738FE001B3148 /* App */,
+				724870B628F7431F001B3148 /* Resources */,
 				724870A828F7391E001B3148 /* Scenes */,
 				281845FB28F5E75C002FB435 /* Assets.xcassets */,
 				281845FD28F5E75C002FB435 /* Preview Content */,
@@ -122,7 +125,6 @@
 		724870AF28F73D87001B3148 /* GhostView */ = {
 			isa = PBXGroup;
 			children = (
-				724870B128F73D98001B3148 /* ViewModel */,
 				724870B028F73D92001B3148 /* View */,
 			);
 			path = GhostView;
@@ -131,17 +133,25 @@
 		724870B028F73D92001B3148 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				724870B228F73DB5001B3148 /* GhostView.swift */,
+				724870B228F73DB5001B3148 /* ARDisplayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		724870B128F73D98001B3148 /* ViewModel */ = {
+		724870B628F7431F001B3148 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				724870B428F73DD7001B3148 /* ViewModel.swift */,
+				724870B728F74329001B3148 /* 3DModels */,
 			);
-			path = ViewModel;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		724870B728F74329001B3148 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				724870B828F74362001B3148 /* Ghost.usdz */,
+			);
+			path = 3DModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +172,7 @@
 			name = " Hallowedemy";
 			packageProductDependencies = (
 				2818460628F5E7A3002FB435 /* CodeScanner */,
+				724870FC28F75410001B3148 /* FocusEntity */,
 			);
 			productName = ScanHalloween;
 			productReference = 281845F428F5E75B002FB435 /*  Hallowedemy.app */;
@@ -193,6 +204,7 @@
 			mainGroup = 281845EB28F5E75B002FB435;
 			packageReferences = (
 				2818460528F5E7A3002FB435 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				724870FB28F75410001B3148 /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 281845F528F5E75B002FB435 /* Products */;
 			projectDirPath = "";
@@ -208,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724870B928F74362001B3148 /* Ghost.usdz in Resources */,
 				281845FF28F5E75C002FB435 /* Preview Assets.xcassets in Resources */,
 				281845FC28F5E75C002FB435 /* Assets.xcassets in Resources */,
 			);
@@ -220,10 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				724870B528F73DD7001B3148 /* ViewModel.swift in Sources */,
 				281845FA28F5E75B002FB435 /* HomeHalloweenView.swift in Sources */,
 				281845F828F5E75B002FB435 /* ScanHalloweenApp.swift in Sources */,
-				724870B328F73DB5001B3148 /* GhostView.swift in Sources */,
+				724870B328F73DB5001B3148 /* ARDisplayView.swift in Sources */,
 				724870AC28F739D5001B3148 /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +453,14 @@
 				kind = branch;
 			};
 		};
+		724870FB28F75410001B3148 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -448,6 +468,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2818460528F5E7A3002FB435 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
+		};
+		724870FC28F75410001B3148 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 724870FB28F75410001B3148 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

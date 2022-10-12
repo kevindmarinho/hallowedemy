@@ -8,6 +8,15 @@
         "branch" : "main",
         "revision" : "9aef09bf5c0274689a89c2fd71794011bebdc43f"
       }
+    },
+    {
+      "identity" : "focusentity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maxxfrazer/FocusEntity",
+      "state" : {
+        "revision" : "a3363f33321843d49352bd0e3d99e66a6560665c",
+        "version" : "2.2.6"
+      }
     }
   ],
   "version" : 2

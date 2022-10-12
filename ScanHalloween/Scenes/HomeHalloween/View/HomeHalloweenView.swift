@@ -129,7 +129,7 @@ struct HomeHalloweenView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeHalloweenView_Previews: PreviewProvider {
     static var previews: some View {
         HomeHalloweenView()
     }
