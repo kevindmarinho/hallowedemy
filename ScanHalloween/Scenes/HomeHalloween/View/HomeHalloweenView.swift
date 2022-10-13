@@ -66,8 +66,8 @@ struct HomeHalloweenView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
-
-          
+            
+            
             VStack{
                 ZStack{
                     Image("teia")
@@ -78,7 +78,7 @@ struct HomeHalloweenView: View {
                     Spacer()
                 }
                 .padding(.bottom, 36.48)
-               
+                
                 Text("Escaneie os QR codes espalhados pelo lab e desvende os enigmas propostos. Lembre-se de explorar todo o ambiente e tenha uma experiência horripilante.")
                     .font(.system(size: 16))
                     .multilineTextAlignment(.center)
@@ -90,23 +90,11 @@ struct HomeHalloweenView: View {
                     .resizable()
                     .frame(width: 220.5, height: 252)
                     .padding(.bottom, 35)
-                
-                Button{
-                    self.isPresentingScanner = true
-                }label:{
-                    Text("Escanear QR Code")
-                        .bold()
-                        .padding(.vertical, 25)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.backgroundYellow)
-                        .foregroundColor(.white)
-                        .cornerRadius(40)
-                        .padding(.horizontal, 25)
-                }
-                
-                NavigationLink(destination: ARDisplayView()) {
-                    HStack{
-                        Text("Ele está aqui")
+                VStack{
+                    Button{
+                        self.isPresentingScanner = true
+                    }label:{
+                        Text("Escanear QR Code")
                             .bold()
                             .padding(.vertical, 25)
                             .frame(maxWidth: .infinity)
@@ -114,10 +102,24 @@ struct HomeHalloweenView: View {
                             .foregroundColor(.white)
                             .cornerRadius(40)
                             .padding(.horizontal, 25)
-
                     }
-                }.padding(.bottom, 30)
-                
+                    
+//                    NavigationLink(destination: ARDisplayView()) {
+//                        HStack{
+//                            Text("Ele está aqui")
+//                                .bold()
+//                                .padding(.vertical, 25)
+//                                .frame(maxWidth: .infinity)
+//                                .background(Color.backgroundYellow)
+//                                .foregroundColor(.white)
+//                                .cornerRadius(40)
+//                                .padding(.horizontal, 25)
+//                            
+//                        }
+//                    }.padding(.bottom, 30)
+                    
+                    
+                }
             }
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
