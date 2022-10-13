@@ -26,3 +26,4 @@ MacOS:
 ```
 git clone https://github.com/kevindmarinho/hallowedemy.git
 ```
+Necessário incluir o Focus Entity package através do Swift Package Manager

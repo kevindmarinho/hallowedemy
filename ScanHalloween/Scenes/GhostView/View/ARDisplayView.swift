@@ -67,11 +67,15 @@ struct ARViewContainer: UIViewRepresentable {
             let anchor = AnchorEntity()
             view.scene.anchors.append(anchor)
 
-            let ghostEntity = try! ModelEntity.loadModel(named: "Ghost")
-            ghostEntity.scale = [0.025, 0.025, 0.025]
+            let ghostEntity = try! ModelEntity.loadModel(named: "ClothGhost")
+            ghostEntity.scale = [0.005, 0.005, 0.005]
             ghostEntity.position = focusEntity.position
-
+            
             anchor.addChild(ghostEntity)
+            
+            for animation in ghostEntity.availableAnimations {
+                ghostEntity.playAnimation(animation.repeat(duration: .infinity), transitionDuration: 1.25, startsPaused: false)
+            }
         }
     }
 }

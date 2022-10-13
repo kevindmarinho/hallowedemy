@@ -11,7 +11,9 @@ import SwiftUI
 struct ScanHalloweenApp: App {
     var body: some Scene {
         WindowGroup {
-            ARDisplayView()
+            NavigationView{
+                HomeHalloweenView()
+            }
         }
     }
 }
