@@ -102,7 +102,7 @@ struct HomeHalloweenView: View {
                             .padding(.horizontal, 35)
                     }
                     
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: ARDisplayView()) {
                         HStack{
                             Text("Ele está aqui")
                                 .bold()
