@@ -67,17 +67,15 @@ struct HomeHalloweenView: View {
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
             
+            Image("teia")
+                .resizable()
+                .frame(width: 96, height: 130)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             
             VStack{
-                ZStack{
-                    Image("teia")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Spacer()
                     Image("title")
                         .padding(.top, 94)
-                    Spacer()
-                }
-                .padding(.bottom, 36.48)
+                        .padding(.bottom, 36.48)
                 
                 Text("Escaneie os QR codes espalhados pelo lab e desvende os enigmas propostos. Lembre-se de explorar todo o ambiente e tenha uma experiência horripilante.")
                     .font(.system(size: 16))
@@ -96,27 +94,27 @@ struct HomeHalloweenView: View {
                     }label:{
                         Text("Escanear QR Code")
                             .bold()
-                            .padding(.vertical, 25)
+                            .padding(.vertical, 18)
                             .frame(maxWidth: .infinity)
                             .background(Color.backgroundYellow)
                             .foregroundColor(.white)
                             .cornerRadius(40)
-                            .padding(.horizontal, 25)
+                            .padding(.horizontal, 35)
                     }
                     
-//                    NavigationLink(destination: ARDisplayView()) {
-//                        HStack{
-//                            Text("Ele está aqui")
-//                                .bold()
-//                                .padding(.vertical, 25)
-//                                .frame(maxWidth: .infinity)
-//                                .background(Color.backgroundYellow)
-//                                .foregroundColor(.white)
-//                                .cornerRadius(40)
-//                                .padding(.horizontal, 25)
-//                            
-//                        }
-//                    }.padding(.bottom, 30)
+                    NavigationLink(destination: EmptyView()) {
+                        HStack{
+                            Text("Ele está aqui")
+                                .bold()
+                                .padding(.vertical, 18)
+                                .frame(maxWidth: .infinity)
+                                .background(Color.backgroundYellow)
+                                .foregroundColor(.white)
+                                .cornerRadius(40)
+                                .padding(.horizontal, 35)
+                            
+                        }
+                    }.padding(.bottom, 30)
                     
                     
                 }
