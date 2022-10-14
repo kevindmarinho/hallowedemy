@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		281845F428F5E75B002FB435 /*  Hallowedemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = " Hallowedemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		281845F428F5E75B002FB435 /* Hallowedemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hallowedemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		281845F728F5E75B002FB435 /* ScanHalloweenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHalloweenApp.swift; sourceTree = "<group>"; };
 		281845F928F5E75B002FB435 /* HomeHalloweenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHalloweenView.swift; sourceTree = "<group>"; };
 		281845FB28F5E75C002FB435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		281845F528F5E75B002FB435 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				281845F428F5E75B002FB435 /*  Hallowedemy.app */,
+				281845F428F5E75B002FB435 /* Hallowedemy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 				724870FC28F75410001B3148 /* FocusEntity */,
 			);
 			productName = ScanHalloween;
-			productReference = 281845F428F5E75B002FB435 /*  Hallowedemy.app */;
+			productReference = 281845F428F5E75B002FB435 /* Hallowedemy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -363,12 +363,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanHalloween/Preview Content\"";
-				DEVELOPMENT_TEAM = XJ57BXJG95;
+				DEVELOPMENT_TEAM = 8MKU4N27YM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-Hallowedemy-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hallowedemy;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso usar tua camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -381,8 +382,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = teste.ScanHalloween;
-				PRODUCT_NAME = " Hallowedemy";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScanHalloween;
+				PRODUCT_NAME = Hallowedemy;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,12 +396,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"ScanHalloween/Preview Content\"";
-				DEVELOPMENT_TEAM = XJ57BXJG95;
+				DEVELOPMENT_TEAM = 8MKU4N27YM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "-Hallowedemy-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hallowedemy;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Preciso usar tua camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -413,8 +415,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = teste.ScanHalloween;
-				PRODUCT_NAME = " Hallowedemy";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScanHalloween;
+				PRODUCT_NAME = Hallowedemy;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
