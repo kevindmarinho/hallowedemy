@@ -170,7 +170,7 @@ struct HomeHalloweenView: View {
                     .padding(.bottom, 36)
                 
                 Text(scannedCode)
-                    .font(.system(size: 18))
+                    .font(.system(size: 24))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .padding(.horizontal, 26)
