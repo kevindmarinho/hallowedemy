@@ -134,13 +134,71 @@ struct HomeHalloweenView: View {
     
     var modal: some View{
         ZStack{
-            Color.background.ignoresSafeArea()
-            Text(scannedCode)
-                .font(.system(size: 18))
-                .multilineTextAlignment(.center)
-                .foregroundColor(.white)
-                .padding(.horizontal, 26)
-                .padding(.bottom, 23)
+           
+            Image("backgroundModal")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+            
+            Image("teia")
+                .resizable()
+                .frame(width: 96, height: 130)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            
+            VStack(spacing: 0){
+                
+                Button(action: {
+                    self.isPresentingModal = false
+                }) {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 10, weight: .bold))
+                        .foregroundColor(Color.background)
+                        .padding(10)
+                        .background(RoundedCornersShape(corners: [.allCorners], radius: 45))
+                        .foregroundColor(Color.orange)
+                        
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding([.top, .trailing], 21)
+                .padding(.bottom, 59)
+                
+                Image("descubra")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.horizontal, 65)
+                    .padding(.bottom, 36)
+                
+                Text(scannedCode)
+                    .font(.system(size: 18))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 26)
+                    .padding(.bottom, 23)
+                
+                Text("Onde estou?")
+                    .bold()
+                    .font(.system(size: 24, weight: .black))
+                    .foregroundColor(.orange)
+                    .padding(.bottom, 96)
+                
+                    
+                Text("Já sabe? Vá até o local")
+                    .bold()
+                    .font(.system(size: 20))
+                    .padding(.vertical, 26)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .foregroundColor(.white)
+                    .background(
+                        Color.orange
+                            .opacity(0.3)
+                    )
+                    
+            
+                Spacer()
+            }
+            
+            
         }
     }
 }
@@ -150,3 +208,16 @@ struct HomeHalloweenView_Previews: PreviewProvider {
         HomeHalloweenView()
     }
 }
+
+struct RoundedCornersShape: Shape {
+    let corners: UIRectCorner
+    let radius: CGFloat
+    
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
